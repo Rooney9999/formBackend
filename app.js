@@ -2,11 +2,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+const cors= require('cors');
 const app = express();
 app.use(bodyParser.json());
+app.use(cors())
 
-mongoose.connect('mongodb+srv://hasan9999:hasan9999@cluster0.rvqfom2.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://hasan:Rooney@cluster0.eyspmtj.mongodb.net/formdb?retryWrites=true&w=majority&appName=Cluster0', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
