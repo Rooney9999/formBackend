@@ -6,6 +6,8 @@ const cors= require('cors');
 const app = express();
 app.use(bodyParser.json());
 app.use(cors())
+app.use(cors({ origin: 'http://localhost:3001' }));
+
 
 mongoose.connect('mongodb+srv://hasan:Rooney@cluster0.eyspmtj.mongodb.net/formdb?retryWrites=true&w=majority&appName=Cluster0', {
         useNewUrlParser: true,
